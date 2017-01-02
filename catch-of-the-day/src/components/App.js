@@ -83,7 +83,7 @@ addToOrder(key) {
   this.setState({ order });
 }
 
-removeFromOrder() {
+removeFromOrder(key) {
   const order = {...this.state.order};
   delete order[key];
   this.setState({ order });
@@ -111,10 +111,10 @@ removeFromOrder() {
            />
            <Inventory
                 addFish={this.addFish}
+                removeFish={this.removeFish}
                 loadSamples={this.loadSamples}
                 fishes={this.state.fishes}
                 updateFish={this.updateFish}
-                removefish={this.removeFish}
             />
       </div>
       )
